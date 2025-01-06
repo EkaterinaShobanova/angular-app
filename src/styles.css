@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: "Roboto Mono", serif;
+  min-height: 100vh;
+}
+*{
+  font-family: "Roboto Mono", serif;
+}
+html{
+  font-family: "Roboto Mono", serif;
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+
+}
+
+.container{
+  padding: 0;
+  flex-direction: column;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  height: 75vh;
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  font-family: "Roboto Mono", serif;
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #871ccc;
+}
+
+button, #minValue, #maxValue {
+  width: 100%; /* Изначально кнопка занимает всю ширину */
+  height: auto; /* Высота зависит от содержимого */
+  font-size: 1.2rem; /* Единый размер шрифта */
+  padding: 0;/* Отступы */
+  border: 2px solid #871ccc;
+  background-color: #871ccc;
+  color: rgb(255, 236, 24);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, width 0.3s ease;
+  margin-bottom: 25px;
+  min-height: 80px; /* Минимальная высота */
+  max-height: 180px; /* Максимальная высота */
+  line-height: 1.2;
+  box-sizing: border-box; /* Гарантия, что padding включается в размеры */
+}
+@media (max-width: 768px) {
+  button, #minValue, #maxValue {
+    font-size: 1rem; /* Уменьшаем текст на телефонах */
+    padding: 8px 16px; /* Уменьшаем внутренние отступы */
+    min-height: 45px; /* Снижаем минимальную высоту */
+  }
+}
+
+@media (min-width: 1024px) {
+  button, #minValue, #maxValue {
+    font-size: 1.2rem; /* Увеличиваем текст на больших экранах */
+    padding: 12px 24px; /* Увеличиваем внутренние отступы */
+    min-height: 60px; /* Немного больше высота на больших экранах */
+  }
+}
+.back_to_menu_button{
+  background-color: #b19de3;
+  border: #a87ec5 3px solid;
+}
+.buttons{
+  flex-direction: column;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+
+}
+.generate_number_h1{
+  height: 70px;
+}
+
+input[type="date"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 3px solid #871ccc;
+  margin-bottom: 1rem;
+}
+label.date-label, .daily-wish{
+  font-family: "Roboto Mono", serif;
+  font-size: 1.2rem;
+  color: #871ccc;
+  font-weight: bold;
+}
+
+.daily-wish{
+  text-shadow: 5px 7px 8px #ffec18 !important;
+  font-weight: bold;
+
+}
+.decorative_background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d5d4dc;
+  z-index: -1;
+  opacity: 0.3;
+}

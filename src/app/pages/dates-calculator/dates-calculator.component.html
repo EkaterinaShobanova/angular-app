@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Выбери даты, а я посчитаю, сколько дней прошло.</h1>
+
+  <div class="form_container">
+    <form [formGroup]="myForm">
+      <div class="form-group">
+        <label for="firstDate" class="date-label">Первая дата:</label>
+        <input type="date" class="begin_date" id="firstDate" formControlName="firstDate">
+      </div>
+      <div class="form-group">
+        <label for="secondDate" class="date-label">Вторая дата:</label>
+        <input type="date" class="end_date" id="secondDate" formControlName="secondDate">
+      </div>
+    </form>
+  </div>
+
+  <div class="buttons">
+    <h1 class="generate_number_h1" *ngIf="daysQuantity !== null">
+      Прошло дней: {{ daysQuantity }}
+    </h1>
+    <button type="button" (click)="count()" [disabled]="myForm.invalid">Рассчитать</button>
+    <button routerLink="/home" class="back_to_menu_button">Вернуться в главное меню</button>
+  </div>
+</div>

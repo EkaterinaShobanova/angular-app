@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Я генерирую случайные числа.</h1>
+  <h1>Введите минимальное и максимальное значение:</h1>
+
+  <form [formGroup]="myForm" (ngSubmit)="generate()">
+    <label for="minValue">От:
+      <input id="minValue" type="number" formControlName="minValue" />
+    </label>
+    <br />
+    <label for="maxValue">До:
+      <input id="maxValue" type="number" formControlName="maxValue" />
+    </label>
+    <br />
+    <h1 class="generate_number_h1" *ngIf="randomNumber !== null">
+      Случайное число: {{ randomNumber }}
+    </h1>
+    <div class="buttons">
+    <button type="submit" class="generate_number_button">Сгенерировать</button>
+
+  <button routerLink = "/home" class="back_to_menu_button">Вернуться в главное меню</button>
+  </div>
+  </form>
+  </div>
+

@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Выбери дату рождения, а я выведу знак зодиака.</h1>
+
+  <form [formGroup]="birthdayForm">
+    <label>
+      <input type="date" class="birthday_date" formControlName="birthdayDate">
+    </label>
+  </form>
+
+  <div *ngIf="horoscopeSign">
+    <h1>Ваш знак гороскопа: {{ horoscopeSign }}</h1>
+  </div>
+
+  <div class="buttons">
+    <button type="submit" (click)="calculateHoroscope()">Рассчитать</button>
+    <button routerLink="/home" class="back_to_menu_button">Вернуться в главное меню</button>
+  </div>
+</div>
